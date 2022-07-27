@@ -1,0 +1,21 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        #  配置git的地址
+        git:
+          uri: https://github.com/southwind9801/aispringcloud.git
+          #  在git下的config目录下找配置文件
+          searchPaths: config
+          #  gitHub的账号密码
+          username: Lin-mj
+          password: lMJ1002ANO
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

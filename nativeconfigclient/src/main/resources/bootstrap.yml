@@ -1,0 +1,12 @@
+spring:
+  #  微服务的别名configclient拼接profiles.active的值dev，通过名字去配置中心查找对应配置文件
+  application:
+    name: configclient
+  profiles:
+    active: dev
+  #    表示配置中心的访问路径
+  cloud:
+    config:
+      uri: http://localhost:8762
+      #      设置客户端优先判断 Config Server 获取是否正常。
+      fail-fast: true

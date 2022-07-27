@@ -1,0 +1,13 @@
+server:
+  port: 8030
+spring:
+  application:
+    name: gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+zuul:
+  #  表示访问名字叫做provider的微服务的业务方法,只需要在本微服务的访问地址后面加上/p/**即可
+  routes:
+    provider: /p/**

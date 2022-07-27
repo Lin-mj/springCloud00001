@@ -1,0 +1,11 @@
+server:
+  port: 8761
+eureka:
+  client:
+    #    表示不注册Eureka Server（Eureka Server也是一个微服务）
+    register-with-eureka: false
+    #    表示不把其他Eureka Server的数据同步过来
+    fetch-registry: false
+    #    Eureka Server的访问地址
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
